@@ -4,15 +4,18 @@ import java.util.Random;
 
 public class Card {
 
+    //Variables needed
     private Suits suit;
     private Values value;
 
-    // create arrays for values and suits - need these to generate random cards
+    // Create arrays for values and suits - need these to generate random cards
     private Values[] values = Values.values();
     private Random randomValues = new Random();
     private Suits[] suits = Suits.values();
     private Random randomSuits = new Random();
 
+
+    //Constructors
     public Card(Suits suit, Values value) {
         this.value = value;
         this.suit = suit;
@@ -24,6 +27,7 @@ public class Card {
         this.value = getRandomValue();
     }
 
+    //Returns suit and value (by string)
     public String toString() {
         return this.suit.toString() + "-" + this.value.toString();
     }
